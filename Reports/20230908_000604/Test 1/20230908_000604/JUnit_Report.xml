@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test 1" time="8.498" tests="4" failures="0" errors="0">
+   <testsuite name="Test 1" tests="4" failures="0" errors="0" time="8.498" skipped="0" timestamp="2023-09-08 00:06:07" hostname="User - LAPTOP-VBS2FC7A" id="Test Suites/Test 1">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\Test 1 Qoin\\Automation-Testing\\Reports\\20230908_000604\\Test 1\\20230908_000604"/>
+         <property name="logFiles" value="D:\\Test 1 Qoin\\Automation-Testing\\Reports\\20230908_000604\\Test 1\\20230908_000604\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="User - LAPTOP-VBS2FC7A"/>
+         <property name="hostAddress" value="192.168.174.131"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.5.0.208"/>
+      </properties>
+      <testcase name="Test Cases/ListUser" time="3.571" classname="Test Cases/ListUser" status="PASSED">
+         <system-out><![CDATA[2023-09-08 00:06:08 - [TEST_CASE][PASSED] - Test Cases/ListUser: Test Cases/ListUser
+
+2023-09-08 00:06:08 - [TEST_STEP][PASSED] - responseList = sendRequest(findTestObject("GetListUser")): Send request successfully
+
+2023-09-08 00:06:11 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\0.har
+
+2023-09-08 00:06:11 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:11 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseList, 200): Verify response status code successfully
+
+2023-09-08 00:06:11 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-09-08 00:06:11 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseList, "data[0].email", "george.bluth@reqres.in"): Verify element property value successfully
+
+2023-09-08 00:06:11 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register" time="1.917" classname="Test Cases/Register" status="PASSED">
+         <system-out><![CDATA[2023-09-08 00:06:11 - [TEST_CASE][PASSED] - Test Cases/Register: Test Cases/Register
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - response1 = sendRequest(findTestObject("GetSingleUser")): Send request successfully
+
+2023-09-08 00:06:12 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\1.har
+
+2023-09-08 00:06:12 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - value = getElementPropertyValue(response1, "data.email"): null
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - println("Email adalah : " + value): null
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - email = value: null
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - println("GlobalVariable email menjadi : " + email): null
+
+2023-09-08 00:06:12 - [TEST_STEP][PASSED] - response2 = sendRequest(findTestObject("PostRegister", ["userName":email])): Send request successfully
+
+2023-09-08 00:06:13 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\2.har
+
+2023-09-08 00:06:13 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:13 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response2, "id", 2): Verify element property value successfully
+
+2023-09-08 00:06:13 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/SingleUser" time="0.942" classname="Test Cases/SingleUser" status="PASSED">
+         <system-out><![CDATA[2023-09-08 00:06:13 - [TEST_CASE][PASSED] - Test Cases/SingleUser: Test Cases/SingleUser
+
+2023-09-08 00:06:14 - [TEST_STEP][PASSED] - responseSingle = sendRequest(findTestObject("GetSingleUser")): Send request successfully
+
+2023-09-08 00:06:14 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\3.har
+
+2023-09-08 00:06:14 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:14 - [TEST_STEP][PASSED] - verifyResponseStatusCode(responseSingle, 200): Verify response status code successfully
+
+2023-09-08 00:06:14 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-09-08 00:06:14 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseSingle, "data.email", "janet.weaver@reqres.in"): Verify element property value successfully
+
+2023-09-08 00:06:14 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/UpdateUser" time="1.744" classname="Test Cases/UpdateUser" status="PASSED">
+         <system-out><![CDATA[2023-09-08 00:06:14 - [TEST_CASE][PASSED] - Test Cases/UpdateUser: Test Cases/UpdateUser
+
+2023-09-08 00:06:14 - [TEST_STEP][PASSED] - response1 = sendRequest(findTestObject("GetListUser")): Send request successfully
+
+2023-09-08 00:06:15 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\4.har
+
+2023-09-08 00:06:15 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:15 - [TEST_STEP][PASSED] - value = getElementPropertyValue(response1, "data[0].first_name"): null
+
+2023-09-08 00:06:15 - [TEST_STEP][PASSED] - println("Value adalah : " + value): null
+
+2023-09-08 00:06:15 - [TEST_STEP][PASSED] - userName = value: null
+
+2023-09-08 00:06:15 - [TEST_STEP][PASSED] - println("GlobalVariable userName menjadi : " + userName): null
+
+2023-09-08 00:06:15 - [TEST_STEP][PASSED] - response2 = sendRequest(findTestObject("UpdateUser")): Send request successfully
+
+2023-09-08 00:06:16 - [MESSAGE][INFO] - HAR: D:\Test 1 Qoin\Automation-Testing\Reports\20230908_000604\Test 1\20230908_000604\requests\main\5.har
+
+2023-09-08 00:06:16 - [MESSAGE][PASSED] - Send request successfully
+
+2023-09-08 00:06:16 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response2, "name", "George"): Verify element property value successfully
+
+2023-09-08 00:06:16 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-09-08 00:06:07 - [TEST_SUITE][PASSED] - Test 1: Test Cases/UpdateUser]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

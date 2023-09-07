@@ -1,0 +1,30 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test 1,,,,2023-09-08 00:06:07,2023-09-08 00:06:16,8.498s,PASSED
+,,,,,,,
+Test Cases/ListUser,,,,2023-09-08 00:06:08,2023-09-08 00:06:11,3.571s,PASSED
+"responseList = sendRequest(findTestObject(""GetListUser""))",,,,2023-09-08 00:06:08,2023-09-08 00:06:11,3.113s,PASSED
+"verifyResponseStatusCode(responseList, 200)",,,,2023-09-08 00:06:11,2023-09-08 00:06:11,0.022s,PASSED
+"verifyElementPropertyValue(responseList, ""data[0].email"", ""george.bluth@reqres.in"")",,,,2023-09-08 00:06:11,2023-09-08 00:06:11,0.059s,PASSED
+,,,,,,,
+Test Cases/Register,,,,2023-09-08 00:06:11,2023-09-08 00:06:13,1.917s,PASSED
+"response1 = sendRequest(findTestObject(""GetSingleUser""))",,,,2023-09-08 00:06:12,2023-09-08 00:06:12,0.595s,PASSED
+"value = getElementPropertyValue(response1, ""data.email"")",,,,2023-09-08 00:06:12,2023-09-08 00:06:12,0.025s,PASSED
+"println(""Email adalah : "" + value)",,,,2023-09-08 00:06:12,2023-09-08 00:06:12,0.003s,PASSED
+email = value,,,,2023-09-08 00:06:12,2023-09-08 00:06:12,0.001s,PASSED
+"println(""GlobalVariable email menjadi : "" + email)",,,,2023-09-08 00:06:12,2023-09-08 00:06:12,0.001s,PASSED
+"response2 = sendRequest(findTestObject(""PostRegister"", [""userName"":email]))",,,,2023-09-08 00:06:12,2023-09-08 00:06:13,0.998s,PASSED
+"verifyElementPropertyValue(response2, ""id"", 2)",,,,2023-09-08 00:06:13,2023-09-08 00:06:13,0.018s,PASSED
+,,,,,,,
+Test Cases/SingleUser,,,,2023-09-08 00:06:13,2023-09-08 00:06:14,0.942s,PASSED
+"responseSingle = sendRequest(findTestObject(""GetSingleUser""))",,,,2023-09-08 00:06:14,2023-09-08 00:06:14,0.623s,PASSED
+"verifyResponseStatusCode(responseSingle, 200)",,,,2023-09-08 00:06:14,2023-09-08 00:06:14,0.003s,PASSED
+"verifyElementPropertyValue(responseSingle, ""data.email"", ""janet.weaver@reqres.in"")",,,,2023-09-08 00:06:14,2023-09-08 00:06:14,0.021s,PASSED
+,,,,,,,
+Test Cases/UpdateUser,,,,2023-09-08 00:06:14,2023-09-08 00:06:16,1.744s,PASSED
+"response1 = sendRequest(findTestObject(""GetListUser""))",,,,2023-09-08 00:06:14,2023-09-08 00:06:15,0.326s,PASSED
+"value = getElementPropertyValue(response1, ""data[0].first_name"")",,,,2023-09-08 00:06:15,2023-09-08 00:06:15,0.031s,PASSED
+"println(""Value adalah : "" + value)",,,,2023-09-08 00:06:15,2023-09-08 00:06:15,0.001s,PASSED
+userName = value,,,,2023-09-08 00:06:15,2023-09-08 00:06:15,0.000s,PASSED
+"println(""GlobalVariable userName menjadi : "" + userName)",,,,2023-09-08 00:06:15,2023-09-08 00:06:15,0.000s,PASSED
+"response2 = sendRequest(findTestObject(""UpdateUser""))",,,,2023-09-08 00:06:15,2023-09-08 00:06:16,1.064s,PASSED
+"verifyElementPropertyValue(response2, ""name"", ""George"")",,,,2023-09-08 00:06:16,2023-09-08 00:06:16,0.017s,PASSED
